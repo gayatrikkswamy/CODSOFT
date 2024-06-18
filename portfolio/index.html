@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio.</div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#internships">Internships</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-content">
+                <div class="intro">
+                    <p class="hello">Hello,</p>
+                    <h1>I'm Gayatri Karuppuchamy</h1>
+                    <p class="profession">Web Developer</p>
+                    <p>From Andhra Pradesh, India</p>
+                    <a href="#contact" class="btn">Hire Me</a>
+                </div>
+                <div class="profile-pic">
+                    <img src="./profile2.jpg" alt="John Doe">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Gayatri, a passionate web developer with a love for creating dynamic and responsive web experiences.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">Python</div>
+                <div class="skill">Web Development (HTML, CSS, JS)</div>
+                <div class="skill">SQL</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Detecting Emotions Using Machine Learning.</h3>
+                    <p>Developed this project using Python and CNN and LPB Algorithums</p>
+                </div>
+                <div class="project-card">
+                    <h3>House Price Prediction System.</h3>
+                    <p>Developed this project using Python and LR Algorithum.</p>
+                </div>
+                <div class="project-card">
+                    <h3>A Online Banking Application.</h3>
+                    <p>Developed this project using Html, Css, Js, Php and MySql.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="internships" class="section">
+        <div class="container">
+            <h2>Internships</h2>
+            <div class="internships-grid">
+                <div class="internship-card">
+                    <h3>Machine Learning Foundation - NASSCOM</h3>
+                    <p>❖	Issued Mar 2023 <br>
+                       ❖	Credential ID : FSP/2023/3/1477978</p>
+                </div>
+                <div class="internship-card">
+                    <h3>AWS Cloud Virtual Internship - EduSkills Foundation</h3>
+                    <p>❖	Used Python Programming Language.<br>
+                       ❖	CNN and LPB Algorithms are used.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+            <p>Email: gayatrikkswamy@gmail.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gayatri Karuppuchamy</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            const observerOptions = {
+                root: null,
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
